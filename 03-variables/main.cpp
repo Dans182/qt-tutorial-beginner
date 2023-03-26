@@ -2,6 +2,11 @@
 #include <QDebug>
 //con esta averiguamos los límites de los tipos de datos.
 #include <limits>
+#include <string>       // std::string
+#include <iostream>     // std::cout
+#include <sstream>      // std::stringstream, std::stringbuf
+
+using namespace std;
 
 int main(int argc, char *argv[])
 {
@@ -10,7 +15,6 @@ int main(int argc, char *argv[])
     //las variables son espacios en la memoria de la pc
     //para almacenar info
     //es un lenguaje tipado
-
 
     int numeroEntero = 10;
 
@@ -46,9 +50,13 @@ int main(int argc, char *argv[])
     long numeroGrande = 5956566;
 
     //variables de numeros enteros,  pero todavía mas grandes.
-    long long numeroGrandeGrande = 59454545646646;
+    long long int numeroGrandeGrande = 59454545646646;
 
-    /*int, double, char, std, unsigned, short, long, long long y float son tipos de datos primitivos de C++*/
+    //variables de numeros con decimales,  pero todavía mas grandes.
+    long double numeroConDecimalesGrandes = 59.46646;
+
+
+    /*int, double, char, std, unsigned, short, long, long long int, long double y float son tipos de datos primitivos de C++*/
 
     //De esta manera averiguamos los límites numericos que permite el tipo de dato short
     //tanto el minimo, como el maximo y me lo imprime en consola, gracias a la importación
@@ -59,7 +67,32 @@ int main(int argc, char *argv[])
     qDebug() << std::numeric_limits<int>::max();
     qDebug() << std::numeric_limits<long>::min();
     qDebug() << std::numeric_limits<long>::max();
-    qDebug() << std::numeric_limits<long long>::min();
-    qDebug() << std::numeric_limits<long long>::max();
+    qDebug() << std::numeric_limits<long long int>::min();
+    qDebug() << std::numeric_limits<long long int>::max();
+
+    //compìlando nos hace una verificación para constatar si hay o no errores.
+
+    qDebug() << "int numero = " << numeroEntero;
+    qDebug() << "número con decimales (double) = " << numeroConDecimales;
+    qDebug() << "numero con decimales (float)= " << numeroDecimalConMenosPrecision;
+    qDebug() << "caracter (char inicial) = " << inicial;
+    qDebug() << "QChar inicial = " << caracter;
+
+    //la linea de abajo me da error para imprimir en pantalla. No acepta el std string.
+    //tenemos que convertirlo en QString. Aca transformamos el string stardard de c++ en QString
+    //qDebug() << "std::string palabra = "  << cadenaDeCaracteres;
+    qDebug() << "std::string palabra = " << QString::fromStdString(cadenaDeCaracteres);
+
+    qDebug() << "QString frase = " << cadenaDeCaracteres2;
+    qDebug() << "unsigned positivo = " << numeroPositivo;
+    qDebug() << "short corto = " << numeroPequeño;
+    qDebug() << "long int = " << numeroGrande;
+    qDebug() << "long long int = " << numeroGrandeGrande;
+
+    //la linea de abajo me da error porque no la reconoce por ser muy grande.
+    //hay que convertirlo a un valor mucho mas pequeño, como double.
+    //qDebug() << "long double  = " << numeroConDecimalesGrandes;
+    qDebug() << "long double  = " << double(numeroConDecimalesGrandes);
+
     return a.exec();
 }
