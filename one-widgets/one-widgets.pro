@@ -1,5 +1,5 @@
 #En el .pro se incluyen las configuraciones de proyecto.
-
+#En el .ui es para diseñar la interfaz gráfica
 #módulos que se van a utilizar
 QT       += core gui
 
