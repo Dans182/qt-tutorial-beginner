@@ -94,5 +94,11 @@ int main(int argc, char *argv[])
     //qDebug() << "long double  = " << numeroConDecimalesGrandes;
     qDebug() << "long double  = " << double(numeroConDecimalesGrandes);
 
+    int b = 20;
+    int c = 50;
+    int d = b + c;
+    qDebug() << d;
+
+
     return a.exec();
 }
