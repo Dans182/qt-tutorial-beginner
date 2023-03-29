@@ -30,7 +30,7 @@ int multiplicaDosNumeros(int numero1, int numero2){
 }
 
 //para utilizar estas funciones debemos declararlas antes de la funcion principal.
-//si se pusieran por debajo, tendríamos que declarar los prototipos.
+//si se pusieran por debajo, tendríamos que declarar los prototipos.18
 
 //por defecto, contamos con la función main que es la que ejecuta el programa, es la principal.
 int main(int argc, char *argv[])
