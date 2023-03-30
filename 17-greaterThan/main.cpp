@@ -12,8 +12,8 @@ int main(int argc, char *argv[])
     int n = sizeof(A) / sizeof(int); //aca estoy indicando que divida el total de bits entre el peso en bit de un valor entero. Esto me indica que dentro del array hay 5 elementos.
     qDebug() << n;
 
-    int menor = std::numeric_limits<int>::max();
-    int mayor = std::numeric_limits<int>::min();
+    int menor = std::numeric_limits<int>::max(); //me indica el valor máximo del tipo de dato int
+    int mayor = std::numeric_limits<int>::min(); //me indica el valor míonimo del tipo de dato int
 
     for(int i = 0; i <= n; i++){
         if(A[i] >= mayor){
