@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     for(int i = 1; i <= 10; i++){
-        qDebug() << fib(i);
+        qDebug() << "iteración " << i << fib(i);
     }
 
     return a.exec();
