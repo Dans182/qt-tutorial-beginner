@@ -5,8 +5,17 @@
 #define IMPRIME_HOLA qDebug() << "hola" //los macros tambien pueden NO tener parámetros. En este caso, tiene una instrucción
 #define INCREMENTA3(a, b, c)(++a), (++b), (++c)
 #define INCREMENTA4(d, e, f)(++d), \
-                            (++e), \
-                            (++f) //hace lo mismo que el anterior, pero divido el macro en varios saltos de línea
+    (++e), \
+    (++f) //hace lo mismo que el anterior, pero divido el macro en varios saltos de línea
+#define IMPRIME3 \
+    qDebug() << "HOLA";\
+    qDebug() << "HOLA";\
+    qDebug() << "HOLA" //Aca te hace impresiones con saltos de línea
+
+#define IMPRIME4(mensaje, repeticiones) \
+    for (int i = 0; i < repeticiones; ++i){ \
+    qDebug() <<(mensaje);\
+    } //esta función me imprime el mensaje que yo introduzca, la cantidad de veces que indique
 
 //Los macros son muy parecidas a funciones.
 int main(int argc, char *argv[])
@@ -29,7 +38,9 @@ int main(int argc, char *argv[])
     qDebug() << x;
     qDebug() << y;
     qDebug() << z;
-    INCREMENTA4(x, y, z);
+
+    IMPRIME3;
+    IMPRIME4("buenas", 8);
 
     return a.exec();
 }
