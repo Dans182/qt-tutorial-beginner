@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     qDebug() << " ";
     /******************************************************************************************************************************************************/
 
-    //en cambio la aritmética de punteros podemos usarla para lo mismo.
+    //en cambio la aritmética 28 - Ordenamiento de la librería estándarde punteros podemos usarla para lo mismo.
 
     int *puntero = array;
 
