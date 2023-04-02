@@ -6,7 +6,7 @@ enum{
     //Aca estoy declarando constantes, que lo que hace es crearme el valor de estas, en numeros enteros enumeradas en orden creciente.
     //empezando por el 0.
     //Sin embargo, puedo asignarle el valor a una de estas variables, y me aceptará esto y en las siguientes variables, lo incrementará
-    //de manera creciente, a partir de justamente el anterior.
+    //de manera creciente, a partir de justamente la anterior.
     BLANCO,
     NEGRO,
     AZUL,
