@@ -15,7 +15,7 @@ void Punto2D::inicializa(double x, double y){ //aca usamos el this, porque si no
     this->x = x;
     this->y = y;
     imprime();
-    this->imprime();
+    this->imprime();//aca puede usarse el puntero, pero igualmente no haría falta porque no hay confl
 }
 
 void Punto2D::imprime() const {
